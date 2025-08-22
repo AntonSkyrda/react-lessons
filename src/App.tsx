@@ -1,13 +1,20 @@
 import './App.css'
+import MyComponent from "./components/MyComponent.tsx";
 
 function App() {
 
   return (
-    <div className="h-full w-full bg-red-700">
-        afgdfadfas
+    <>
+        <MyComponent title={"hello1"}>
+            Lorem ipsum dolor sit.
+        </MyComponent>
+        <MyComponent title={"hello2"}>
+        </MyComponent>
+        <MyComponent title={"hello3"}>
+        </MyComponent>
 
-    </div>
-  )
+    </>
+  );
 }
 
 export default App
