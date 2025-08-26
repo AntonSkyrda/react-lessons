@@ -1,11 +1,16 @@
 import './App.css'
+import {products} from "./data/productsArray.ts";
+import {MyProduct} from "./components/my-product/MyProduct.tsx";
 
 function App() {
 
-  return (
-    <>
-    </>
-  )
+    return (
+        <>
+            {
+                products.map((product, index) => (<MyProduct key={index} product={product} />))
+            }
+        </>
+    )
 }
 
 export default App
