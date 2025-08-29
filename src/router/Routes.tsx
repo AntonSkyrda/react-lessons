@@ -3,6 +3,7 @@ import {Layout} from "../layouts/Layout.tsx";
 import {HomePage} from "../pages/HomePage.tsx";
 import {UsersPage} from "../pages/UsersPage.tsx";
 import {PostPage} from "../pages/PostPage.tsx";
+import {SingleUserDetailsPage} from "../pages/SingleUserDetailsPage.tsx";
 
 export const routes = createBrowserRouter(
     [
@@ -17,6 +18,10 @@ export const routes = createBrowserRouter(
                 {
                     path: "users",
                     element: <UsersPage/>,
+                },
+                {
+                    path: "users/details",
+                    element: <SingleUserDetailsPage/>
                 },
                 {
                     path: "posts",
