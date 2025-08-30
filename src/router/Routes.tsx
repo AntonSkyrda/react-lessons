@@ -2,7 +2,7 @@ import {createBrowserRouter} from "react-router-dom";
 import {Layout} from "../layouts/Layout.tsx";
 import {HomePage} from "../pages/HomePage.tsx";
 import {UsersPage} from "../pages/UsersPage.tsx";
-import {PostPage} from "../pages/PostPage.tsx";
+import {PostsPage} from "../pages/PostsPage.tsx";
 import {SingleUserDetailsPage} from "../pages/SingleUserDetailsPage.tsx";
 
 export const routes = createBrowserRouter(
@@ -18,6 +18,12 @@ export const routes = createBrowserRouter(
                 {
                     path: "users",
                     element: <UsersPage/>,
+                    children: [
+                        {
+                            path: "posts/:userId",
+                            element: <PostsPage/>,
+                        },
+                    ]
                 },
                 {
                     path: "users/details",
@@ -25,7 +31,7 @@ export const routes = createBrowserRouter(
                 },
                 {
                     path: "posts",
-                    element: <PostPage/>,
+                    element: <PostsPage/>,
                 }
             ]
         },

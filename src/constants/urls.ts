@@ -4,5 +4,11 @@ export const urls = {
     users: {
         allUsers: `${baseURL}users`,
         byID: (id: number) => `${baseURL}users/${id}`,
+    },
+    posts: {
+        allPosts: `${baseURL}posts`,
+        byID: (id: number) => `${baseURL}posts/${id}`,
+        allPostsByUserId: (id: number) => `${baseURL}posts/?userId=${id}`,
     }
+
 }

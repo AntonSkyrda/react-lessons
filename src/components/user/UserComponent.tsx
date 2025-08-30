@@ -10,14 +10,14 @@ type UserTypeProps = {
 export const UserComponent: FC<UserTypeProps> = ({user}) => {
     const navigate = useNavigate()
     const handleOnClick = () => {
-        navigate("details", {state: user})
+        navigate(`posts/${user.id}`, {state: user})
     };
     return (
         <div>
             <Link to={"details"} state={user}>
                 {user.username}
             </Link>
-            <button onClick={handleOnClick}>
+            <button className="flex px-2 py-2 bg-blue-600 text-white rounded transition-colors duration-200 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400" onClick={handleOnClick}>
                 Go to details
             </button>
         </div>
